@@ -8,7 +8,7 @@ Boot application to retrieve the street address (and name if available) for the 
 * **SW1A 2AA**
 * **BT48 6DQ**
 
-## How run application
+## Quick instruction how to run application
 
 * At the beginning you have to install gradle. The command below allows run gradle installation.
 
