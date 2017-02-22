@@ -20,7 +20,7 @@ Boot application to retrieve the street address (and name if available) for the 
 
 * The command below allows run project
 
-`java -jar build\libs\map-service-0.1.0.jar`
+`java -jar build/libs/map-service-0.1.0.jar`
 
 * When project will be run then you can open below page in web browser
  
