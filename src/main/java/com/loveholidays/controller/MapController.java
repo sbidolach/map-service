@@ -17,7 +17,7 @@ import java.util.List;
 public class MapController {
 
     @Autowired
-    GoogleMapApi googleMapApi;
+    private GoogleMapApi googleMapApi;
 
     @RequestMapping(method=RequestMethod.GET, value={"/map/{postcode}"})
     public List<Location> map(@PathVariable("postcode") String postcode) throws Exception {

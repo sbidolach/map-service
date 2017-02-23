@@ -34,7 +34,6 @@ public class GoogleMapApiTest {
 
     @Test
     public void getLocationAddressByPostcodeAddressSuccess() throws Exception {
-
         GoogleMapApi googleMapApiSpy = Mockito.spy(googleMapApi);
         GeocodingResult[] result = new GeocodingResult[1];
         GeocodingResult geocodingResult = new GeocodingResult();
@@ -48,7 +47,6 @@ public class GoogleMapApiTest {
 
     @Test
     public void getLocationAddressByPostcodePostcodeSuccess() throws Exception {
-
         GoogleMapApi googleMapApiSpy = Mockito.spy(googleMapApi);
         GeocodingResult[] result = new GeocodingResult[1];
         GeocodingResult geocodingResult = new GeocodingResult();
@@ -62,7 +60,6 @@ public class GoogleMapApiTest {
 
     @Test
     public void getLocationAddressByPostcodeReturnMoreThanOne() throws Exception {
-
         GoogleMapApi googleMapApiSpy = Mockito.spy(googleMapApi);
         GeocodingResult[] result = new GeocodingResult[2];
         result[0] = new GeocodingResult();
@@ -75,7 +72,6 @@ public class GoogleMapApiTest {
 
     @Test
     public void getLocationAddressByPostcodeReturnEmptyArray() throws Exception {
-
         GoogleMapApi googleMapApiSpy = Mockito.spy(googleMapApi);
         Mockito.doReturn(new GeocodingResult[0]).when(googleMapApiSpy).getGeocodeFromGoogleMap(searchPostcode);
 

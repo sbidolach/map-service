@@ -33,7 +33,7 @@ public class MapControllerTest {
     private MockMvc mockMvc;
 
     @MockBean
-    GoogleMapApi googleMapApiMock;
+    private GoogleMapApi googleMapApiMock;
 
     private String mapPath = "/map/";
 
@@ -48,7 +48,6 @@ public class MapControllerTest {
 
     @Test
     public void getMapByPostcodeSuccess() throws Exception {
-
         final String searchPostcode = "TW8 FDS";
         final String expectedAddress = "Orchard Road";
 
@@ -65,11 +64,8 @@ public class MapControllerTest {
                 .andExpect(jsonPath("$[0].address", is(expectedAddress)));
     }
 
-
-
     @Test
     public void getMapByPostcodeWhenIsNotFounded() throws Exception {
-
         final String searchPostcode = "TW8 FDS";
 
         given(googleMapApiMock.getLocationAddressByPostcode(searchPostcode)).willReturn(new ArrayList<Location>());
@@ -83,7 +79,6 @@ public class MapControllerTest {
 
     @Test
     public void getMapByPostcodeAndThrowException() throws Exception {
-
         final String searchPostcode = "TW8 FDS";
 
         given(googleMapApiMock.getLocationAddressByPostcode(searchPostcode)).willThrow(new Exception("Internal Exception"));
